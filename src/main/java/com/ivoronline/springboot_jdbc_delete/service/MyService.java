@@ -22,8 +22,7 @@ public class MyService {
     Connection connection = dataSource.getConnection();
 
     //INSERT RECORDS (Use single quotes for Strings)
-    String    sql       = " DELETE FROM  PERSON WHERE name = '"+name+"' AND age = "+age+";" +
-                          " DELETE FROM  PERSON WHERE name = 'Bill'";
+    String    sql       = " DELETE FROM  PERSON WHERE name = '"+name+"' AND age = "+age;
     Statement statement = connection.createStatement();
     int       success   = statement.executeUpdate(sql);
 
